@@ -27,15 +27,15 @@ let P3 = new Promise((resolve, reject) => {
 
 
 P1.then((value, t1) => {
-    console.log("Promise 1 has been resolved with in " + t1 + " time with value " + value)
+    console.log("Promise 1 has been resolved with value " + value)
 })
 
 P2.then((value, t2) => {
-    console.log("Promise 2 has been resolved with in " + t2 + " time with value " + value)
+    console.log("Promise 2 has been resolved with value " + value)
 })
 
 P3.then((value, t3) => {
-    console.log("Promise 3 has been resolved with in " + t3 + " time with value " + value)
+    console.log("Promise 3 has been resolved with value " + value)
 })
 
 Promise.all([P1, P2, P3]).then((value) => {
