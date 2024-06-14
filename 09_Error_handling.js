@@ -19,4 +19,4 @@ setTimeout(() => {
 
 // Note try catch will catch the synchronous code not asynchronous code
 
-//For asynchronous code put try catch inside it 
+//For asynchronous code put try catch inside it
