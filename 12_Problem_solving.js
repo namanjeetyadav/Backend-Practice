@@ -61,7 +61,54 @@
 // }
 // a()
 
+// Problem 4 Write a program using Promise.all() inside an async/await to await 3 promises. Compare its results with the case where we await these promise one by one.
+let promise1 = async => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(1)
 
+        }, 3000)
+    })
+}
+
+let promise2 = async => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(1)
+
+        }, 2000)
+    })
+}
+
+let promise3 = async => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(30)
+
+        }, 1000)
+    })
+}
+
+
+const run = async () => {
+    console.time("run")
+    // Here wait for each promise to fulfill
+    //     let a1 = await promise1()
+    //     let a2 = await promise2()
+    //     let a3 = await promise3()
+    //     console.log(a1, a2, a3)
+
+
+    // Here each promise get fulfilled 
+    let a1 = promise1()
+    let a2 = promise2()
+    let a3 = promise3()
+    leta1a2a3 = await Promise.all([a1, a2, a3])
+
+    console.timeEnd("run")
+}
+
+run()
 
 
 
