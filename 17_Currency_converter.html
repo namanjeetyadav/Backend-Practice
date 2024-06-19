@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Linking font-awesome start here -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Linking font-awesome end here -->
+
+    <link rel="stylesheet" href="17_Currency_converter.css">
+    </link>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <h1> Currency Converter </h1>
+        <form action="">
+            <p>Enter Amount</p>
+            <input type="text" value="100">
+            <div class="select-conatiner">
+                <p>from</p>
+                <img src="https://flagsapi.com/IN/flat/64.png">
+                <select name="" id="">
+                    <option value="INR">INR</option>
+                    <option value="USD">USD</option>
+                    <option value="CHN">CHN</option>
+                </select>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <div class="select-conatiner">
+                <p>To</p>
+                <img src="https://flagsapi.com/US/flat/64.png">
+                <select name="" id="">
+                    <option value="INR">INR</option>
+                    <option value="USD" selected>USD</option>
+                    <option value="CHN">CHN</option>
+                </select>
+            </div>
+
+
+            <div class="message">1 USD = 80 INR</div>
+            <button>Covert</button>
+
+
+        </form>
+    </div>
+
+
+    <script src="17_Currency_converter.js"> </script>
+</body>
+
+</html>
