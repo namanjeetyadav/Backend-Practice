@@ -1,11 +1,29 @@
+const dropdown = document.querySelectorAll(".all-selects select");
 
+for (let select of dropdown) {
+    for (let currCode in countryList) {
+        let newOption = document.createElement("option");
+        newOption.innerText = currCode;
+        newOption.value = currCode;
 
-const dropdown = document.querySelector(".all-selects select");
+        if (select.name === "from" && currCode === "USD") {
+            newOption.selected = "selected";
+        }
+        else if (select.name === "to" && currCode === "INR") {
+            newOption.selected = "selected";
+        }
+        select.append(newOption);
+    }
+    select.addEventListener("change", (evt) => {
+        updateFlag(evt.target);
+    });
+}
 
-
-let optionElement = document.createElement("option");
-optionElement.value = "1"; 
-optionElement.textContent = "2"; 
-
-dropdown.appendChild(optionElement);
+const updateFlag = (element) => {
+let currCode = element.value;
+let countryCode = countryList[currCode];
+let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+let img = element.parentElement.querySelector("img");
+img.src = newSrc;
+};
 
