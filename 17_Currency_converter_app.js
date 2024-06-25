@@ -1,29 +1,17 @@
-const dropdown = document.querySelectorAll(".all-selects select");
+const dropdown = document.querySelectorAll(".all-select select")
 
 for (let select of dropdown) {
-    for (let currCode in countryList) {
-        let newOption = document.createElement("option");
-        newOption.innerText = currCode;
-        newOption.value = currCode;
+    for (let curr in countryList) {
+        let newOption = document.createElement("option")
+        newOption.innerHTML = curr;
+        newOption.value = curr;
+        if (select.name === "from" && curr === "USD") {
+            newOption.selected = "selected";
+        }
+        else if (select.name === "to" && curr === "INR") {
+            newOption.selected = "selected"
+        }
 
-        if (select.name === "from" && currCode === "USD") {
-            newOption.selected = "selected";
-        }
-        else if (select.name === "to" && currCode === "INR") {
-            newOption.selected = "selected";
-        }
         select.append(newOption);
     }
-    select.addEventListener("change", (evt) => {
-        updateFlag(evt.target);
-    });
 }
-
-const updateFlag = (element) => {
-let currCode = element.value;
-let countryCode = countryList[currCode];
-let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
-let img = element.parentElement.querySelector("img");
-img.src = newSrc;
-};
-
