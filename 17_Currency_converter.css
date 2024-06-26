@@ -50,7 +50,7 @@ form input {
 
 }
 
-.all-selects {
+.all-select {
     display: flex;
 
     justify-content: space-between;
@@ -64,12 +64,12 @@ form input {
     font-size: 1.5rem;
 }
 
-.select-conatiner img {
+.select-container img {
     max-width: 2.5rem;
 }
 
 
-.select-conatiner {
+.select-container {
     display: flex;
 }
 
