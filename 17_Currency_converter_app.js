@@ -1,4 +1,5 @@
-// const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies/eur.json"
+const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies"
+
 
 const dropdown = document.querySelectorAll(".all-select select")
 
@@ -34,7 +35,7 @@ const updateExchangeRate = async () => {
 
 }
 
-// const URl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies/${currCode}.json`
+
 
 
 const updateFlag = (element) => {
@@ -49,7 +50,7 @@ const updateFlag = (element) => {
 
 
 
-btn.addEventListener("click", (evt) => {
+btn.addEventListener("click", async (evt) => {
     evt.preventDefault();  //Restrict the default behaviour of form to refresh the page while submission.
     let amount = document.querySelector(".amount input")
     let amountValue = amount.value;
@@ -57,11 +58,24 @@ btn.addEventListener("click", (evt) => {
         amountValue = 1;
         amount.value = "1";
     }
-    updateExchangeRate();
+    console.log(fromCurr.value, toCurr.value);
+   
+    const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
+    
+
+
+    let response = await fetch(URL);
+    let data = await response.json();
+    let rates = (data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()]);
+    console.log(rates);
+    
 
 });
 
-console.log(fromCurr.value, toCurr.value);
+
+
+
+
 
 
 
