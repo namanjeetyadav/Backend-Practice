@@ -1,13 +1,15 @@
 const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies"
 
 
-const dropdown = document.querySelectorAll(".all-select select")
+const dropdown = document.querySelectorAll(".all-select select");
 
 const btn = document.querySelector("form button");
 
-const fromCurr = document.querySelector(".from select")
+const fromCurr = document.querySelector(".from select");
 
-const toCurr = document.querySelector(".to select")
+const toCurr = document.querySelector(".to select");
+
+const message = document.querySelector(".message");
 
 for (let select of dropdown) {
     for (let curr in countryList) {
@@ -59,18 +61,23 @@ btn.addEventListener("click", async (evt) => {
         amount.value = "1";
     }
     console.log(fromCurr.value, toCurr.value);
-   
+
     const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
-    
+
 
 
     let response = await fetch(URL);
     let data = await response.json();
     let rates = (data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()]);
     console.log(rates);
-    
+    let finalAmt = amountValue * rates;
+
+    message.innerHTML = `${amountValue} ${fromCurr.value} = ${finalAmt} ${toCurr.value} `;
+
 
 });
+
+
 
 
 
