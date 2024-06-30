@@ -98,13 +98,24 @@ form p {
 
 @media screen and (max-width: 1098px) {
     .main-container {
-     width: 50vw;
+        width: 50vw;
     }
-  }
+}
 
-  @media screen and (max-width: 560px) {
+@media screen and (max-width: 560px) {
     .main-container {
-     width: 50vw;
-     /* padding: 0.5rem; */
+        width: 70vw;
+        /* padding: 0.5rem; */
     }
-  }
+}
+
+@media screen and (max-width: 460px) {
+    .main-container {
+        width: 70vw;
+
+    }
+
+    .all-select {
+        margin: 1.5rem 0rem;
+    }
+}
