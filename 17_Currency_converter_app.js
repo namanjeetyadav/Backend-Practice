@@ -14,7 +14,7 @@ const message = document.querySelector(".message");
 for (let select of dropdown) {
     for (let curr in countryList) {
         let newOption = document.createElement("option")
-        newOption.innerHTML = curr;
+        newOption.innerText = curr;
         newOption.value = curr;
         if (select.name === "from" && curr === "USD") {
             newOption.selected = "selected";
@@ -37,9 +37,6 @@ const updateExchangeRate = async () => {
 
 }
 
-
-
-
 const updateFlag = (element) => {
     let currCode = element.value;
     let countryCode = countryList[currCode];
@@ -48,8 +45,6 @@ const updateFlag = (element) => {
     img.src = newSrc;
 
 }
-
-
 
 
 btn.addEventListener("click", async (evt) => {
