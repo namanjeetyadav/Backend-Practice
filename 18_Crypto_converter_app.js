@@ -1,3 +1,7 @@
+const BASE_URL = `https://api.coinconvert.net/convert/btc/usd?amount=1`
+
+
+
 const dropdown = document.querySelectorAll(".all-select select")
 
 for (let select of dropdown) {
