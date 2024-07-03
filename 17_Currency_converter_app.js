@@ -34,7 +34,6 @@ for (let select of dropdown) {
 const updateExchangeRate = async () => {
     let amount = document.querySelector(".amount input");
     let amountValue = amount.value;
-
 }
 
 const updateFlag = (element) => {
@@ -43,9 +42,7 @@ const updateFlag = (element) => {
     let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
-
 }
-
 
 btn.addEventListener("click", async (evt) => {
     evt.preventDefault();  //Restrict the default behaviour of form to refresh the page while submission.
@@ -71,13 +68,3 @@ btn.addEventListener("click", async (evt) => {
 
 
 });
-
-
-
-
-
-
-
-
-
-

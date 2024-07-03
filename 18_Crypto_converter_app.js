@@ -1,6 +1,6 @@
-const BASE_URL = `https://api.coinconvert.net/convert/btc/usd?amount=1`
+const BASE_URL = "https://api.coinconvert.net/convert/btc/usd?amount=1"
 
-
+// const 
 
 const dropdown = document.querySelectorAll(".all-select select")
 
@@ -8,14 +8,13 @@ for (let select of dropdown) {
     for (let cryptoCurr in cryptoList) {
         let newOption = document.createElement("option")
         newOption.innerText = cryptoList[cryptoCurr].toUpperCase();
-        // cryptoList[cryptoCurr].toUpperCase(); 
         newOption.value = cryptoCurr;
-
+        if (select.name === "from" && cryptoCurr === "BTC") {
+            newOption.selected = "selected"
+        }
+        else if (select.name === "to" && cryptoCurr === "ETH"){
+            newOption.selected = "selected"
+        }
         select.append(newOption);
     }
-
 }
-
-
-
-
