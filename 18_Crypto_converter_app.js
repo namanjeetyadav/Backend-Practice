@@ -66,6 +66,28 @@ apiUrl.then((value1) => {
 //     container.append(img);
 // });
 
+// let apiUrl = fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
+// apiUrl.then((response) => {
+//     return response.json();
+// }).then((data) => {
+//     console.log(data.image.large);
+
+//     var container = document.getElementById('image-container');
+
+//     var img = document.createElement('img');
+
+//     // Set the image source to the URL fetched from the API
+//     img.src = data.image.large;
+
+//     // (Optional) Set additional attributes like alt text or width/height
+//     img.alt = 'Bitcoin Logo';
+//     img.width = 200; // Adjust as needed
+//     img.height = 200; // Adjust as needed
+
+//     // Append the image to the container
+//     container.append(img);
+// });
+
 
 
 
