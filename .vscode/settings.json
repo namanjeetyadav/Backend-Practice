@@ -1,3 +1,4 @@
 {
-  "livePreview.hostIP": " 192.168.29.8"
+  "livePreview.hostIP": " 192.168.29.8",
+  "livePreview.serverRoot": "  192.168.29.8"
 }
