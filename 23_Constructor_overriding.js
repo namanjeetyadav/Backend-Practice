@@ -22,7 +22,7 @@ class Programmer extends Employee {
     }
 
     requestLeaves(){
-        super.requestLeaves(4)
+        // super.requestLeaves(4)
         console.log("One extra leave is granted")
     }
 }
