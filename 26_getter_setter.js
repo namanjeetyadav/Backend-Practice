@@ -23,3 +23,11 @@ class Rabbit extends Animal {
 
 let a = new Rabbit("Oreo")
 a.fly()
+console.log(a.name)
+a.name = "Jack"
+console.log(a.name)
+
+let c = 56;
+console.log(a instanceof Animal)
+console.log(a instanceof Animal)
+console.log(c instanceof Animal)
