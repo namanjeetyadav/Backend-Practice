@@ -18,7 +18,7 @@ class User {
     set password(value) {
         this._password = value
     }
-// 
+
 }
 
 const e = new User("naman", "mypasscode")
