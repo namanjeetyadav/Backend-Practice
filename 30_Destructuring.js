@@ -39,3 +39,4 @@ let obj2 = {
     address: "kanpur"
     }
     console.log({...obj2, name:"John"})
+    console.log(obj2)
