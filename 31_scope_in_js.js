@@ -7,16 +7,16 @@ console.log(a);
 // This will show an error because let is block scoped
 
 {
-    var a = 8;
+    var b = 8;
 }
-console.log(a);
+console.log(b);
 
 // This will run becasue var is global scoped
 
 function f1(){
-    let a = 8;
-    console.log(a)
+    let c = 8;
+    console.log(c)
 }
 f1()
-console.log(a) 
+console.log(c) 
 // This console.log will show the error because here a is function scoped
